@@ -52,7 +52,7 @@
 
 <li class="nav-item">
     <a class="nav-link" href="charts.html">
-        <span>Data Laporan</span></a>
+        <span>Laporan</span></a>
 </li>
 
 </ul>

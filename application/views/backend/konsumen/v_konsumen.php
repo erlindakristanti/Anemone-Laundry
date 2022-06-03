@@ -1,5 +1,18 @@
 <div class="container-fluid">
 
+<?php
+    if(!empty($this->session->flashdata('info'))){ ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Selamat!</strong> <?= $this->session->flashdata('info')?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+    <?php }
+
+?>
+
     <div class="row">
         <div class="col-md-12">
             <a href="<?= base_url()?>konsumen/tambah" class="btn btn-primary">Tambah Konsumen</a> <br><br>
@@ -24,6 +37,25 @@
                                     <th>Opsi</th>
                                 </tr>
                             </thead>
+
+                            <tbody>
+                                <?php
+                                    $no = 1;
+                                foreach($data as $row) {?>
+                                    <tr>
+                                        <td><?= $no++; ?></td>
+                                        <td><?= $row->kode_konsumen;?></td>
+                                        <td><?= $row->nama_konsumen;?></td>
+                                        <td><?= $row->alamat_konsumen;?></td>
+                                        <td><?= $row->no_telp;?></td>
+                                        <td>
+                                            <a href="#" class="btn btn-success btn-sm"> Edit </a>
+                                            <a href="#" class="btn btn-danger btn-sm"> Delete </a>
+                                        </td>
+                                    </tr>
+                                <?php }
+                                ?>
+                            </tbody>
                         </table>
                     </div>
                 </div>
