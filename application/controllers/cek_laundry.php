@@ -6,5 +6,6 @@ class Cek_Laundry Extends CI_Controller{
     {
         $this->load->view('frontend/header');
         $this->load->view('frontend/cek_laundry');
+        $this->load->view('frontend/footer');
     }
 }
