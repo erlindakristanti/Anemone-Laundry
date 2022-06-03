@@ -5,8 +5,8 @@ class M_Login extends CI_Model {
 
     public function proses_login($username, $password)
     {
-        $this->db->where('password, $password'):
-        $this->db->where('password, $password'):
+        $this->db->where('password', $password);
+        $this->db->where('password', $password);
         $query = $this->db->get('user');
         if ($query->num_rows() > 0) {
             foreach ($query->result() as $row) {
@@ -21,7 +21,7 @@ class M_Login extends CI_Model {
             redirect('dashboard');
         }else{
             $this->session->set_flashdata('info', '<div 
-            class="alert aler-danger" role="alert"> Login Gagal, Silahkan Periksa Kembali Username dan Password Anda ! </div>');
+            class="alert alert-danger" role="alert"> Login Gagal, Silahkan Periksa Kembali Username dan Password Anda ! </div>');
             redirect('panel'); 
         }
     }
