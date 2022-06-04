@@ -44,7 +44,6 @@ class Konsumen extends CI_Controller{
         $isi['content'] = 'backend/konsumen/e_konsumen';
         $isi['judul'] = 'Form Edit Konsumen';
         $isi['konsumen'] = $this->m_konsumen->edit($id);
-        //var_dump($isi['konsumen']);
         $this->load->view('backend/dashboard', $isi);
     }
 

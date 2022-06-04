@@ -23,4 +23,26 @@ class M_paket extends CI_Model{
         return $kodejadi;
     }
 
+    public function getDataPaket()
+    {
+        return $this->db->get('paket')->result();
+    }
+
+    public function edit($kode_paket)
+    {
+        $this->db->where('kode_paket',$kode_paket);
+        return $this->db->get('paket')->row_array();
+    }
+
+    public function update($kode_paket, $data)
+    {
+        $this->db->where('kode_paket', $kode_paket);
+        $this->db->update('paket', $data);
+    }
+
+    public function delete($kode_paket)
+    {
+        $this->db->where('kode_paket', $kode_paket);
+        $this->db->delete('paket');
+    }
 }

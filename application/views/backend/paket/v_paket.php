@@ -38,7 +38,21 @@
                             </thead>
 
                             <tbody>
-                               
+                            <?php
+                                $no = 1;
+                                foreach($data as $row) {?>
+                                    <tr>
+                                        <td><?= $no++; ?></td>
+                                        <td><?= $row->kode_paket;?></td>
+                                        <td><?= $row->nama_paket;?></td>
+                                        <td><?= "Rp. ". number_format($row->harga_paket, 0,'.','.');?></td>
+                                        <td>
+                                            <a href="<?= base_url()?>paket/edit/<?= $row->kode_paket;?>" class="btn btn-success btn-sm"> Edit </a>
+                                            <a href="<?= base_url()?>paket/delete/<?= $row->kode_paket;?>" class="btn btn-danger btn-sm"onclick="return confirm('Anda Yakin Ingin Menghapus?')"> Delete </a>
+                                        </td>
+                                    </tr>
+                                <?php }
+                                ?>
                             </tbody>
                         </table>
                     </div>
