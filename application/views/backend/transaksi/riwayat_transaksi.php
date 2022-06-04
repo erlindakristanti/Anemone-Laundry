@@ -82,11 +82,11 @@
                                         <?php
                                             if ($row->status == "Selesai"){?>
                                                 <td>
-                                                    <a href="" class="btn btn-warning btn-sm"> Detail </a>
+                                                    <a href="<?= base_url()?>transaksi/detail/<?= $row->kode_transaksi;?>" class="btn btn-warning btn-sm"> Detail </a>
                                                 </td>
                                            <?php }else{?>
                                                 <td>
-                                                    <a href="" class="btn btn-warning btn-sm"> Detail </a>
+                                                    <a href="<?= base_url()?>transaksi/detail/<?= $row->kode_transaksi;?>" class="btn btn-warning btn-sm"> Detail </a>
                                                     <a href="<?= base_url()?>transaksi/edit_transaksi/<?= $row ->kode_transaksi;?>" class="btn btn-success btn-sm"> Edit </a>
                                                 </td>
                                            <?php }
