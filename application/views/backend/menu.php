@@ -41,7 +41,7 @@
 </li>
 
 <li class="nav-item">
-    <a class="nav-link" href="charts.html">
+    <a class="nav-link" href="<?= base_url()?>paket">
         <span>Data Paket</span></a>
 </li>
 
