@@ -13,6 +13,19 @@
     <title>Document</title>
 </head>
 <body>
+
+<?php
+    if(!empty($this->session->flashdata('info'))){ ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Selamat!</strong> <?= $this->session->flashdata('info')?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+    <?php }
+
+?> 
     <div class="container-fluid">
         <h1 class="h3 mb-2 text-gray-800"><?= $judul;?></h1>
         <div class="card shadow mb-4">
