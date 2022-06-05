@@ -4,9 +4,9 @@ defined('BASEPATH') OR exit ('No direct script access allowed');
 class Login extends CI_Controller {
 
 
-    public function_construct()
+    public function __construct()
     {
-        parent::_construct();
+        parent::__construct();
         $this->load->model('m_login');
 
     }
@@ -16,5 +16,11 @@ class Login extends CI_Controller {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $this->m_login->proses_login($username, $password);
+    }
+
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('panel');
     }
 }

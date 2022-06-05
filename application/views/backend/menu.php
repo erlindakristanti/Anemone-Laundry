@@ -64,6 +64,14 @@
     <span>Laporan</span></a>
 </li>
 
+<hr class="sidebar-divider d-noned-mb-block">
+
+<li class="nav-item">
+    <a class="nav-link" href="<?= base_url()?>login/logout">
+    <i class="fas fa-sign-out-alt"></i>
+    <span>Logout</span></a>
+</li>
+
 </ul>
     </body>
 </html>
