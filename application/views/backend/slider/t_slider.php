@@ -19,7 +19,7 @@
                     <textarea name="deskripsi_slider" class="form-control" cols="30" rows="6" placeholder="Input Deskripsi Slider" required></textarea>
                 </div>
                 <div class="form-group">
-                    <input type="file" name="gambar_slider" class="form-control" placeholder="Input Harga Paket" required>
+                    <input type="file" name="gambar_slider" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <select name="status_slider" class="form-control" required>
