@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2022 at 07:22 AM
+-- Generation Time: Jun 05, 2022 at 09:48 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -79,7 +79,11 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id_slider`, `judul_slider`, `deskripsi_slider`, `status_slider`, `gambar_slider`) VALUES
-(1, 'Testing input slider', 'uji coba input data slider', 'Aktif', '');
+(1, 'Testing input slider', 'uji coba input data slider', 'Aktif', ''),
+(2, 'Testing input slider', 'coba', 'Aktif', ''),
+(3, 'Testing input slider', 'uji coba', 'Aktif', ''),
+(4, 'Testing input slider', 'uji coba', 'Aktif', 'bunga.png'),
+(5, 'Testing input slider 2', 'uji coba 2', 'Aktif', 'laundry.jpg');
 
 -- --------------------------------------------------------
 
@@ -170,7 +174,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
