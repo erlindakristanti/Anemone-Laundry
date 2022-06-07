@@ -26,7 +26,7 @@ class About extends CI_Controller {
 
     public function simpan()
     {
-        $config['upload_path']      = 'assets/image/about';
+        $config['upload_path']      = 'assets/images/about';
         $config['allowed_types']    = 'jpg|png';
         $config['max_size']         = '2048';
         $this->load->library('upload', $config);
