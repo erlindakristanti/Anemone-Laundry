@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2022 at 09:48 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Generation Time: Jun 07, 2022 at 10:12 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `laundry`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `about`
+--
+
+CREATE TABLE `about` (
+  `id_about` int(11) NOT NULL,
+  `judul_about` varchar(50) NOT NULL,
+  `deskripsi_about` text NOT NULL,
+  `gambar_about` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `about`
+--
+
+INSERT INTO `about` (`id_about`, `judul_about`, `deskripsi_about`, `gambar_about`) VALUES
+(1, 'ljhhh nmn,', '  fgjfgkh  ', '');
 
 -- --------------------------------------------------------
 
@@ -58,7 +78,8 @@ CREATE TABLE `paket` (
 --
 
 INSERT INTO `paket` (`kode_paket`, `nama_paket`, `harga_paket`) VALUES
-('P001', 'Cuci Basah', '9000');
+('P001', 'Cuci Basah', '9000'),
+('P002', 'Cuci Kering', '6000');
 
 -- --------------------------------------------------------
 
@@ -79,11 +100,8 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id_slider`, `judul_slider`, `deskripsi_slider`, `status_slider`, `gambar_slider`) VALUES
-(1, 'Testing input slider', 'uji coba input data slider', 'Aktif', ''),
-(2, 'Testing input slider', 'coba', 'Aktif', ''),
-(3, 'Testing input slider', 'uji coba', 'Aktif', ''),
-(4, 'Testing input slider', 'uji coba', 'Aktif', 'bunga.png'),
-(5, 'Testing input slider 2', 'uji coba 2', 'Aktif', 'laundry.jpg');
+(1, 'Testing input slider 2', '   uji coba 2 bnn', 'Aktif', 'laundry.jpg'),
+(14, 'contoh', ' qqqqnnn', 'Aktif', '50295.jpg');
 
 -- --------------------------------------------------------
 
@@ -137,6 +155,12 @@ INSERT INTO `user` (`id_user`, `username`, `password`) VALUES
 --
 
 --
+-- Indexes for table `about`
+--
+ALTER TABLE `about`
+  ADD PRIMARY KEY (`id_about`);
+
+--
 -- Indexes for table `konsumen`
 --
 ALTER TABLE `konsumen`
@@ -171,10 +195,16 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `about`
+--
+ALTER TABLE `about`
+  MODIFY `id_about` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `user`
