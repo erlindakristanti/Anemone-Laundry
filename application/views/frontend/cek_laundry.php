@@ -1,17 +1,18 @@
-<from>
+<from method="post" action="<?= base_url()?>cek_laundry">
     <div class="container">
         <div class="row my-5">
             <div class="col-md-10">
-                <input typer="text" name="" class="form-control" placeholder="
-                 Silahkan masukkan kode transaksi anda !">
-                </div>
+                <input typer="text" name="kode_transaksi" class="form-control" 
+                placeholder="Silahkan masukkan kode transaksi anda !">
+            </div>
 
-                <div class="col-md-2"></div>
+            <div class="col-md-2">
                 <button type="submit" class="btn btn-warning">Cek Laundry</button>
             </div>
         </div>
     </div>
 </form>
+
 <div clas="container">
     <table class="table table-bordered table-striped mb-5">
         <thead>
@@ -26,9 +27,24 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td colspan="5" class="bg-danger text-warning">Tidak ada data</td>
-        </tr>
+
+            <?php
+                if (!empty($data)) {
+                    foreach ($data as $row) {?>
+                        <tr>
+                            <td><?= $row->nama_konsumen;?></td>
+                            <td><?= $row->tgl_masuk;?></td>
+                            <td><?= $row->nama_paket;?></td>
+                            <td><?= "Rp. ". number_format($row->grand_totals,0,'.','.');?></td>
+                            <td><?= $row->status;?></td>
+                        </tr>
+                    <?php }
+                }else {?>
+                    <tr>
+                        <td colspan="5" class="bg-danger text-warning">Tidak ada data</td>
+                    </tr>
+                <?php }
+            ?>
         </tbody>
     </table>
 </div>

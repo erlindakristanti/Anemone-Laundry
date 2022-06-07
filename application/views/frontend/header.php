@@ -16,10 +16,10 @@
 
   <body>
     
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
   <a class="navbar-brand" href="#">
-    <img src="<?= base_url()?>assets/images/logo.png" height="90">
+    <img src="<?= base_url()?>assets/images/logo.png" height="40">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,28 +36,43 @@
 </nav>
 
 <!-- Akhir Navbar -->
-
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <?php
+    // eror
+      foreach ($slider as $sld => $value) {
+        if ($sld == 0) {?>
+          <li data-target="#carouselExampleIndicators" data-slide-to="<?= $sld;?>" class="active"></li>
+        <?php }else {?>
+          <li data-target="#carouselExampleIndicators" data-slide-to="<?= $sld;?>"></li>
+        <?php }
+      }
+    ?>
   </ol>
+    
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100 image-slider" src="<?= base_url()?>assets/images/slider/slide1.jpg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block bg-caption">
-      <h5>Judul Slider 1</h5>
-      <p>Deskripsi Slider 1</p>
-    </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100 image-slider" src="<?= base_url()?>assets/images/slider/slide2.jpg" alt="Second slide">
-      <div class="carousel-caption d-none d-md-block bg-caption">
-      <h5>Judul Slider 2</h5>
-      <p>Deskripsi Slider 2</p>
-    </div>
-    </div>
+      <?php
+      // eror
+        foreach ($slider as $sld => $value) {
+          if ($sld == 0) {?>
+            <div class="carousel-item active">
+              <img class="d-block w-100 image-slider" src="<?= base_url()?>assets/images/slider/<?= $value->gambar_slider;?>" alt="First slide">
+              <div class="carousel-caption d-none d-md-block bg-caption">
+                <h5><?= $value->judul_slider;?></h5>
+                <p><?= $value->deskripsi_slider;?></p>
+              </div>
+            </div>
+          <?php }else {?>
+            <div class="carousel-item">
+              <img class="d-block w-100 image-slider" src="<?= base_url()?>assets/images/slider/<?= $value->gambar_slider;?>" alt="Second slide">
+              <div class="carousel-caption d-none d-md-block bg-caption">
+                <h5><?= $value->judul_slider;?></h5>
+                <p><?= $value->deskripsi_slider;?></p>
+              </div>
+            </div>
+          <?php }
+        }
+      ?>
   </div>
   <a class="carousel-control-prev btn-slider" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -79,5 +94,6 @@
       AOS.init({
         easing: 'ease-in-out-sine'
       });
+    </script>   
   </body>
-  </html>
+</html>

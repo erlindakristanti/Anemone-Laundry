@@ -49,13 +49,22 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
+
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                            <a class="nav-item nav-link active" href="<?= base_url()?>slider">Kelola Slider <span class="sr-only">(current)</span></a>
+                                <a class="nav-item nav-link active" href="<?= base_url()?>slider">Kelola Slider <span class="sr-only">(current)</span></a>
                             
                             </div>
                         </div>
+
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link active" href="<?= base_url()?>about">About <span class="sr-only">(current)</span></a>
+                            
+                            </div>
+                        </div>
+
                         </nav>
                    
 

@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <a href="<?= base_url()?>slider/tambah" class="btn btn-danger">Tambah Slider</a> <br><br>
+            <a href="<?= base_url()?>about/tambah" class="btn btn-danger">Tambah About</a> <br><br>
         </div>
     </div>
 
@@ -33,7 +33,6 @@
                                     <th>Gambar</th>
                                     <th>Judul</th>
                                     <th>Deskripsi</th>
-                                    <th>Status</th>
                                     <th>Opsi</th>
                                 </tr>
                             </thead>
@@ -41,28 +40,19 @@
                             <tbody>
                                 <?php
                                     $no = 1;
-                                    foreach ($slider as $sld) {?>
+                                    foreach ($data as $row) {?>
                                         <tr>
                                             <td><?= $no++;?></td>
                                             <td>
-                                                <a href="<?= base_url()?>assets/images/slider/<?= $sld->gambar_slider;?>" target="_blank">
-                                                    <img src="<?= base_url()?>assets/images/slider/<?= $sld->gambar_slider;?>" alt="" width="60">
+                                                <a href="<?= base_url()?>assets/images/about/<?= $row->gambar_about;?>" target="_blank">
+                                                    <img src="<?= base_url()?>assets/images/about/<?= $row->gambar_about;?>" alt="" width="70">
                                                 </a>
                                             </td>
-                                            <td><?= $sld->judul_slider;?></td>
-                                            <td><?= $sld->deskripsi_slider;?></td>
+                                            <td><?= $row->judul_about;?></td>
+                                            <td><?= $row->deskripsi_about;?></td>
                                             <td>
-                                                <?php
-                                                    if ($sld->status_slider == "Aktif") {?>
-                                                        <span class="badge badge-success">Aktif</span>
-                                                    <?php }else{?>
-                                                        <span class="badge badge-danger">Tidak Aktif</span>
-                                                    <?php }
-                                                ?>
-                                            </td>
-                                            <td>
-                                                <a href="<?= base_url()?>slider/edit/<?= $sld->id_slider;?>" class="btn btn-success btn-sm">Edit</a>
-                                                <a href="<?= base_url()?>slider/delete/<?= $sld->id_slider;?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin Mau Menghapus ?');">Delete</a>
+                                                <a href="<?= base_url()?>about/edit/<?= $row->id_about;?>" class="btn btn-success"> Edit</a>
+                                                <a href="<?= base_url()?>about/delete/<?= $row->id_about;?>" class="btn btn-danger" onclick="return confirm('Yakin Mau Menghapus ?');"> Delete</a>
                                             </td>
                                         </tr>
                                     <?php }

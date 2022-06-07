@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- gak ada -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -19,7 +20,7 @@
                     <textarea name="deskripsi_slider" class="form-control" cols="30" rows="6" placeholder="Input Deskripsi Slider" required></textarea>
                 </div>
                 <div class="form-group">
-                    <input type="file" name="gambar_slider" class="form-control" required>
+                    <input type="file" name="gambar_slider" class="form-control" placeholder="Input Gambar About" required>
                 </div>
                 <div class="form-group">
                     <select name="status_slider" class="form-control" required>
@@ -31,7 +32,7 @@
                 
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary"> Simpan </button>
-                    <a href="<?= base_url()?>konsumen" class="btn btn-danger"> Batal</a>
+                    <a href="<?= base_url()?>slider" class="btn btn-danger"> Batal</a>
                 </div>
                 
             </form>
