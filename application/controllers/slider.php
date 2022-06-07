@@ -26,7 +26,7 @@ class Slider extends CI_Controller {
 
     public function simpan()
     {
-        $config['upload_path'] = 'assets/image/slider';
+        $config['upload_path'] = 'assets/images/slider';
         $config['allowed_types'] = 'jpg|png';
         $config['max_size'] = '2048';
         $this->load->library('upload', $config);
@@ -58,7 +58,7 @@ class Slider extends CI_Controller {
     public function update()
     {
         $id_slider = $this->input->post('id_slider');
-        $config['upload_path'] = 'assets/image/slider';
+        $config['upload_path'] = 'assets/images/slider';
         $config['allowed_types'] = 'jpg|png';
         $config['max_size'] = '2048';
 
