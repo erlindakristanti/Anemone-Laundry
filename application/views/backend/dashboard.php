@@ -11,6 +11,12 @@
     <meta name="author" content="">
 
     <title>Anemone Laundry</title>
+    <style>
+            .bg_dashboard{
+                /* background-image: linear-gradient(#5245c5, #70bce7); */
+                background-color: #5245c5;
+            }
+        </style>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url()?>assets/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,6 +25,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="<?= base_url()?>assets/admin/vendor/datables/dataTables.bootstrap4.min.css">    
+    
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url()?>assets/admin/css/sb-admin-2.min.css" rel="stylesheet">
@@ -42,7 +49,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-dark bg-danger topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-dark bg_dashboard topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -65,7 +72,7 @@
                             </div>
                         </div>
 
-                        </nav>
+                    </nav>
                    
 
                     <!-- Topbar Navbar -->
@@ -110,7 +117,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; Anemone Laundry 2022</span>
                     </div>
                 </div>
             </footer>

@@ -11,14 +11,19 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Anemone Laundry</title>
+    <style>
+            .bg_navbar{
+                background-image: linear-gradient(#5245c5, #70bce7);
+            }
+        </style>
   </head>
 
 
   <body>
     
-  <nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark bg_navbar">
   <a class="navbar-brand" href="#">
-    <img src="<?= base_url()?>assets/images/logo.png" height="40">
+    <img src="<?= base_url()?>assets/images/anemon.png" height="40">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
