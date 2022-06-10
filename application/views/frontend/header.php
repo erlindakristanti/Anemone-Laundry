@@ -45,11 +45,11 @@
   <ol class="carousel-indicators">
     <?php
     // eror
-      foreach ($slider as $sld => $value) {
-        if ($sld == 0) {?>
-          <li data-target="#carouselExampleIndicators" data-slide-to="<?= $sld;?>" class="active"></li>
+      foreach ($slider as $key => $value) {
+        if ($key == 0) {?>
+          <li data-target="#carouselExampleIndicators" data-slide-to="<?= $key;?>" class="active"></li>
         <?php }else {?>
-          <li data-target="#carouselExampleIndicators" data-slide-to="<?= $sld;?>"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="<?= $key;?>"></li>
         <?php }
       }
     ?>
@@ -58,8 +58,8 @@
   <div class="carousel-inner">
       <?php
       // eror
-        foreach ($slider as $sld => $value) {
-          if ($sld == 0) {?>
+        foreach ($slider as $key => $value) {
+          if ($key == 0) {?>
             <div class="carousel-item active">
               <img class="d-block w-100 image-slider" src="<?= base_url()?>assets/images/slider/<?= $value->gambar_slider;?>" alt="First slide">
               <div class="carousel-caption d-none d-md-block bg-caption">
