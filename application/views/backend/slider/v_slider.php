@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <a href="<?= base_url()?>slider/tambah" class="btn btn-danger">Tambah Slider</a> <br><br>
+            <a href="<?= base_url()?>slider/tambah" class="btn  btn-primary">Tambah Slider</a> <br><br>
         </div>
     </div>
 
