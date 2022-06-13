@@ -44,9 +44,6 @@
                                 <option value="Tidak Aktif" selected>Tidak Aktif</option>
                             <?php }
                         ?>
-                        <!-- <option value=""> = Pilih Status= </option> -->
-                        <!-- <option value="Aktif">Aktif</option> -->
-                        <!-- <option value="Tidak Aktif">Tidak Aktif</option> -->
                     </select>
                 </div>
                 

@@ -20,7 +20,7 @@
 
 
   <body>
-    
+  
   <nav class="navbar navbar-expand-lg navbar-dark bg_navbar">
   <a class="navbar-brand" href="#">
     <img src="<?= base_url()?>assets/images/anemon.png" height="40">
@@ -44,7 +44,6 @@
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <?php
-    // eror
       foreach ($slider as $key => $value) {
         if ($key == 0) {?>
           <li data-target="#carouselExampleIndicators" data-slide-to="<?= $key;?>" class="active"></li>
@@ -54,10 +53,9 @@
       }
     ?>
   </ol>
-    
+
   <div class="carousel-inner">
-      <?php
-      // eror
+    <?php
         foreach ($slider as $key => $value) {
           if ($key == 0) {?>
             <div class="carousel-item active">
@@ -79,6 +77,7 @@
         }
       ?>
   </div>
+
   <a class="carousel-control-prev btn-slider" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -99,6 +98,6 @@
       AOS.init({
         easing: 'ease-in-out-sine'
       });
-    </script>   
+    </script>
   </body>
 </html>

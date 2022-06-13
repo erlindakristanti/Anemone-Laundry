@@ -23,7 +23,6 @@
                 <th>Total</th>
                 <th>Status</th>
             </tr>       
-
         </thead>
 
         <tbody>

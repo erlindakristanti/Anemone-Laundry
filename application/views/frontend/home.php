@@ -10,15 +10,16 @@
 
                 </div class="col-md-8">
                     <h5><?= $row->judul_about;?></h5>
-                    <p> <?= $row->deskripsi_about;?></p>
+                    <p><?= $row->deskripsi_about;?></p>
                 </div>
            <?php }
         ?>   
     </div>
 
     <div class="row mb-5">
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding: 10px">
             <h5>Jenis Paket</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed iure distinctio fugit provident! Quis dolores quidem totam ipsam maiores necessitatibus? Similique quae at nam voluptatibus neque nemo ipsam unde hic!</p>
        
             <table class="table table-bordered">
                 <thead>
