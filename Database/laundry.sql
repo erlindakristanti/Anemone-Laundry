@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2022 at 10:12 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 7.3.28
+-- Generation Time: Jun 13, 2022 at 04:51 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -59,7 +59,11 @@ CREATE TABLE `konsumen` (
 --
 
 INSERT INTO `konsumen` (`kode_konsumen`, `nama_konsumen`, `alamat_konsumen`, `no_telp`) VALUES
-('K001', 'Erlinda Kristanti', 'Tuban', '04949');
+('K001', 'Hyuan Ind', 'Tuban', '04949'),
+('K002', 'Alvioni Tineke', 'Jalan Kalimantan No. 43', '085712324557'),
+('K003', 'Novita Kariena', 'Jalan Danau Toba No. 8', '081467843245'),
+('K004', 'Prasetyo ', 'Jalan Karimata No. 89', '085673228906'),
+('K005', 'Bayu Putra', 'Jalan Jawa No. 90', '085243356543');
 
 -- --------------------------------------------------------
 
@@ -79,7 +83,9 @@ CREATE TABLE `paket` (
 
 INSERT INTO `paket` (`kode_paket`, `nama_paket`, `harga_paket`) VALUES
 ('P001', 'Cuci Basah', '9000'),
-('P002', 'Cuci Kering', '6000');
+('P002', 'Cuci Kering', '7000'),
+('P003', 'Cuci + Setrika', '10000'),
+('P004', 'Setrika', '5000');
 
 -- --------------------------------------------------------
 
@@ -126,10 +132,14 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`kode_transaksi`, `kode_konsumen`, `kode_paket`, `tgl_masuk`, `tgl_ambil`, `berat`, `grand_total`, `bayar`, `status`) VALUES
-('TR20220604001', 'K001', 'P001', '2022-06-04 03:37:16', '0000-00-00 00:00:00', 5, 45000, 'Belum Lunas', 'Proses'),
+('TR20220604001', 'K005', 'P001', '2022-06-13 07:41:02', '2022-06-13 02:41:56', 7, 63000, 'Lunas', 'Selesai'),
 ('TR20220604002', 'K001', 'P001', '2022-06-04 07:30:50', '0000-00-00 00:00:00', 3, 27000, 'Lunas', 'Selesai'),
 ('TR20220604007', 'K001', 'P001', '2022-06-04 08:21:11', '2022-06-04 00:00:00', 10, 90000, 'Belum Lunas', 'Selesai'),
-('TR20220604008', 'K001', 'P001', '2022-06-04 09:35:28', '2022-06-04 04:39:51', 7, 63000, 'Lunas', 'Selesai');
+('TR20220604008', 'K001', 'P001', '2022-06-04 09:35:28', '2022-06-04 04:39:51', 7, 63000, 'Lunas', 'Selesai'),
+('TR20220613009', 'K001', 'P003', '2022-06-13 07:24:14', '2022-06-13 02:41:27', 5, 50000, 'Lunas', 'Selesai'),
+('TR20220613010', 'K002', 'P001', '2022-06-13 07:32:57', '0000-00-00 00:00:00', 2, 18000, 'Lunas', 'Proses'),
+('TR20220613011', 'K003', 'P003', '2022-06-13 07:38:46', '0000-00-00 00:00:00', 6, 60000, 'Lunas', 'Baru'),
+('TR20220613012', 'K005', 'P004', '2022-06-13 07:42:13', '0000-00-00 00:00:00', 3, 15000, 'Belum Lunas', 'Baru');
 
 -- --------------------------------------------------------
 
