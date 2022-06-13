@@ -57,7 +57,7 @@
                     </button>
 
 
-                    <nav class="navbar navbar-expand-lg navbar-light">
+                    <!-- <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
                                 <a class="nav-item nav-link active" href="<?= base_url()?>slider">Kelola Slider <span class="sr-only">(current)</span></a>
@@ -72,7 +72,7 @@
                             </div>
                         </div>
 
-                    </nav>
+                    </nav> -->
                    
 
                     <!-- Topbar Navbar -->
